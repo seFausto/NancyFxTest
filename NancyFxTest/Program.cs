@@ -17,9 +17,6 @@ namespace NancyFxTest
             urlReservations.CreateAutomatically = true;
             hostConfiguration.UrlReservations = urlReservations;
 
-            
-
-
             using (var host = new NancyHost(hostConfiguration, new Uri(url)))
             {
                 host.Start();

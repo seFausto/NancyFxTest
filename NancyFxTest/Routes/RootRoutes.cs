@@ -1,5 +1,6 @@
 ﻿using Nancy;
 using Nancy.ModelBinding;
+using NancyFxTest.DataAccess;
 using System;
 
 namespace NancyFxTest
@@ -14,7 +15,6 @@ namespace NancyFxTest
             Get["hello/{name}"] = HelloName;
 
             Post["postTest"] = PostTest;
-            
         }
 
         private dynamic PostTest(dynamic parameters)
@@ -29,7 +29,6 @@ namespace NancyFxTest
             var name = parameters.name;
 
             return $"Hello {name}";
-
         }
 
         private dynamic Index(dynamic parameters)
@@ -51,5 +50,5 @@ namespace NancyFxTest
         }
 
     }
-     
+
 }
